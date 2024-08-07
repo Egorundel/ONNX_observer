@@ -19,7 +19,7 @@ int main() {
     nvonnxparser::IParser* parser = nvonnxparser::createParser(*network, gLogger_);
 
     // Parse the ONNX model from a file
-    if (!parser->parseFromFile("./model.onnx", static_cast<int32_t>(nvinfer1::ILogger::Severity::kWARNING))) {
+    if (!parser->parseFromFile("./onnx_model/model.onnx", static_cast<int32_t>(nvinfer1::ILogger::Severity::kWARNING))) {
         std::cerr << "Failed to parse ONNX model." << std::endl;
         return -1;
     }
