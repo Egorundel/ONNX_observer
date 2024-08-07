@@ -7,9 +7,6 @@
 #include "NvInfer.h"
 #include "NvInferPlugin.h"
 
-#include "cuda_runtime_api.h"
-#include <cuda.h>
-
 #include "logging.h"
 
 #endif  // TENSORRT_ONNX_PARSER_H

@@ -12,28 +12,13 @@ message(STATUS "TensorRT Version: ${TensorRT_VERSION_STRING}")
 message(STATUS "Find TensorRT include at ${TensorRT_INCLUDE_DIRS}")
 message(STATUS "Find TensorRT libraries: ${TensorRT_LIBRARIES}")
 
-# Find Threads
-find_package(Threads)
-
-# Find OpenCV
-find_package(OpenCV REQUIRED)
-
-# CUDA
-find_package(CUDA REQUIRED)
-message(STATUS "Find CUDA include at ${CUDA_INCLUDE_DIRS}")
-message(STATUS "Find CUDA libraries: ${CUDA_LIBRARIES}")
-
 include_directories(
     ${PROJECT_SOURCE_DIR}/include 
-    ${OpenCV_INCLUDE_DIRS} 
-    ${CUDA_INCLUDE_DIRS} 
     ${TensorRT_INCLUDE_DIRS} 
     ${TensorRT_SAMPLE_DIR}/common
 )
 
 link_directories(
-    ${OpenCV_LIBS} 
-    ${CUDA_LIBRARIES} 
     ${TensorRT_LIBRARIES}
 )
 
@@ -47,16 +32,12 @@ add_executable(ONNX_observer ${My_Source_Files} ${My_Include_Files})
 # Include directories
 target_include_directories(ONNX_observer PUBLIC 
     ${PROJECT_SOURCE_DIR}/include 
-    ${OpenCV_INCLUDE_DIRS} 
-    ${CUDA_INCLUDE_DIRS}
     ${TensorRT_INCLUDE_DIRS} 
     ${TensorRT_SAMPLE_DIR}/common
 )
 
 # Link libraries
 target_link_libraries(ONNX_observer PUBLIC 
-    ${OpenCV_LIBS} 
-    ${CUDA_LIBRARIES} 
     ${CMAKE_THREAD_LIBS_INIT}
     ${TensorRT_LIBRARIES}
 )
