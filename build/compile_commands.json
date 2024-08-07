@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/egorundel/Desktop/ONNX_observer/build",
-  "command": "/usr/bin/c++   -I../include -I/common   -std=c++14 -Wall -Ofast -Wfatal-errors -g   -std=gnu++14 -o CMakeFiles/ONNX_observer.dir/src/onnx_observer.cpp.o -c /home/egorundel/Desktop/ONNX_observer/src/onnx_observer.cpp",
-  "file": "/home/egorundel/Desktop/ONNX_observer/src/onnx_observer.cpp"
-}
-]

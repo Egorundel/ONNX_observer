@@ -1,3 +1,0 @@
-/home/egorundel/Desktop/ONNX_observer/build/CMakeFiles/rebuild_cache.dir
-/home/egorundel/Desktop/ONNX_observer/build/CMakeFiles/edit_cache.dir
-/home/egorundel/Desktop/ONNX_observer/build/CMakeFiles/ONNX_observer.dir
